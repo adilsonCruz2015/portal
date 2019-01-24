@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Lista de Curso</h2>
+    
+  <form [formGroup]="buscaForm" (ngSubmit)="submit()"  novalidate>
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="palavraChave" class="sr-only">Palavra chave</label>
+          <input type="text" class="form-control" id="palavraChave" formControlName="palavraChave" placeholder="Filtrar por...">
+        </div>
+      </div>        
+    </form>
+  <a routerLink="inserir" class="btn btn-primary btn-lg btn-block col-md-2">Novo</a>    
+  <br>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sigla</th>
+        <th scope="col">Descrição</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="cursos$ | async as cursos">
+      <tr *ngFor="let curso of cursos">
+        <th scope="row">{{ curso.id }}</th>
+        <td>{{ curso.nome }}</td>
+        <td>{{ curso.sigla }}</td>
+        <td>{{ curso.descricao }}</td>
+        <td><a [routerLink]="[curso.id, 'atualizar']" class="btn btn-primary btn-sm btn-block">Ataulizar</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#">2 <span class="sr-only">(atual)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Próximo</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+

@@ -1,0 +1,31 @@
+{ 
+	"cursos": [
+		{
+			"id": "15B5C323-A1EE-47FD-8192-699B06C979B8",
+			"nome": "Ensino Fundamental 1",			
+			"sigla": "EF1",
+			"descricao": "Uma descrição qualquer sobre o curso.",
+			"criadoEm": "2017-10-30 10:50:24.791",
+			"alteradoEm": "2017-10-30 10:50:24.791",
+			"status": "Ativo"
+		},
+		{
+			"id": "15B5C323-A1EE-47FD-8192-699B06C979B8",
+			"nome": "Ensino Médio",			
+			"sigla": "EM",
+			"descricao": "Uma descrição qualquer sobre o curso.",
+			"criadoEm": "2017-10-30 10:50:24.791",
+			"alteradoEm": "2017-10-30 10:50:24.791",
+			"status": "Inativo"
+		},
+		{
+			"id": "15B5C323-A1EE-47FD-8192-699B06C979B8",
+			"nome": "Educação Infantil",			
+			"sigla": "EI",
+			"descricao": "Uma descrição qualquer sobre o curso.",
+			"criadoEm": "2017-10-30 10:50:24.791",
+			"alteradoEm": "2017-10-30 10:50:24.791",
+			"status": "Inativo"
+		}
+	]
+}
